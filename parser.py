@@ -1,5 +1,6 @@
 import re
-file = open("Documents/GitHub/parser/match_complete.test")
+file = open("/home/paccanaro/Common/PROJECTS/ConSAT/data/2019/match_complete.xml")
+output = open("/home/paccanaro/Common/PROJECTS/ConSAT/data/2019/mobidb.prot","w")
 pattern = re.compile(r'<[^>]*>')
 attr = re.compile(r'\w+=\"[^"]+\"')
 movidb=False
@@ -18,7 +19,9 @@ for line in file:
                 elements = tag.split('"')
                 start=elements[1]
                 end=elements[3]
-                print(proteinID+":"+start+"-"+end)
+                output.write(proteinID+":"+start+"-"+end+"\n")
+                #print(proteinID+":"+start+"-"+end)
                 
                 movidb=False
 file.close()
+output.close()
