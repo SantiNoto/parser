@@ -1,5 +1,5 @@
-blast = open("Documents/GitHub/parser/uniq.ids")
-mobidb = open("Documents/GitHub/parser/mobidb.prot")
+blast = open("/home/paccanaro/Common/PROJECTS/ConSAT/data/2019/work/gfam/uniq.ids")
+mobidb = open("/home/paccanaro/Common/PROJECTS/ConSAT/data/2019/mobidb.prot")
 prot = dict()
 coverage = dict()
 totalProt = 0

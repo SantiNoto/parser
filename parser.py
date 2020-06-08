@@ -1,5 +1,5 @@
 import re
-file = open("/home/paccanaro/Common/PROJECTS/ConSAT/data/2019/match_complete.xml")
+file = open("/home/paccanaro/Common/PROJECTS/ConSAT/data/2018/testRun/data/match_complete.xml")
 output = open("/home/paccanaro/Common/PROJECTS/ConSAT/data/2019/mobidb.prot","w")
 pattern = re.compile(r'<[^>]*>')
 attr = re.compile(r'\w+=\"[^"]+\"')
@@ -11,7 +11,6 @@ for line in file:
             if "protein" in tag:
                 elements = tag.split('"')
                 proteinID = elements[1]
-                continue
             if "mobidb-lite" in tag:
                 movidb=True
                 continue
